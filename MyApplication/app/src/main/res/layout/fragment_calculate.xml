@@ -1,9 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.raksa.myapplication.CalculateFragment">
+    tools:context="com.example.raksa.myapplication.CalculateFragment"
+    android:weightSum="1">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -19,8 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:inputType="number"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/editText2"
@@ -28,13 +30,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:inputType="number"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.16"
+        app:srcCompat="@drawable/emoji_party_pack_38_512" />
 </LinearLayout>

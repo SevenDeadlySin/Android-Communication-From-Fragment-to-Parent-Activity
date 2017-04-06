@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         //Check if there is existed fragment in the container..
         Fragment ifExisted = fragmentManager.findFragmentById(R.id.container);
         if (ifExisted==null){
-
+            fragmentTransaction.add(R.id.container,fragment).commit();
         }
 
     }
