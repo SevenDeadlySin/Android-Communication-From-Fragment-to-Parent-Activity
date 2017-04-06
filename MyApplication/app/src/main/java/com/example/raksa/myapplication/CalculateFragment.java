@@ -1,8 +1,11 @@
 package com.example.raksa.myapplication;
 
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.renderscript.Sampler;
+import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,13 +79,16 @@ public class CalculateFragment extends Fragment{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                SendDataToActivity();
             }
         });
-
-
         return view;
 
+    }
+
+    private void SendDataToActivity(){
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.add(Integer.valueOf(editText1.getText().toString()),Integer.valueOf(editText2.getText().toString()));
     }
 
 }
